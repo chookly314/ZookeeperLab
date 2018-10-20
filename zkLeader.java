@@ -27,7 +27,7 @@ import org.apache.zookeeper.data.Stat;
 // the method process has to be created for implement Watcher. However
 // this process should never be invoked, as the "this" watcher is used
 
-public class zkMember implements Watcher {
+public class zkLeader implements Watcher {
 	private static final int SESSION_TIMEOUT = 5000;
 
 	private static String rootMembers = "/members";
@@ -45,7 +45,7 @@ public class zkMember implements Watcher {
 
 	private ZooKeeper zk;
 
-	public zkMember() {
+	public zkLeader() {
 
 		// Select a random zookeeper server
 		Random rand = new Random();
