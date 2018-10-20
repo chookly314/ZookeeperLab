@@ -196,7 +196,7 @@ public class zkLeader implements Watcher {
 	}
 
 	public static void main(String[] args) {
-		zkMember zk = new zkMember();
+		zkLeader zk = new zkLeader();
 		try {
 			Thread.sleep(300000);
 		} catch (Exception e) {
